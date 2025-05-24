@@ -1,73 +1,110 @@
-# 🖥️ Helpdesk Analyst Simulation Lab
+# 💼 Helpdesk Analyst Simulation Lab
 
-_A hands-on IT support lab replicating real-world helpdesk analyst responsibilities._
-
----
-
-## 🎯 Project Objective
-
-This lab was designed to simulate a typical day-in-the-life of a Helpdesk Analyst supporting both office and retail environments. It showcases my ability to manage IT infrastructure, resolve tickets, configure endpoints, and document technical procedures.
+_A hands-on, real-world simulation project designed to showcase practical IT Support skills for Helpdesk Analyst roles._
 
 ---
 
-## 🧪 Lab Scope
+## 🎯 Project Overview
+This lab simulates the daily responsibilities of a Helpdesk Analyst, including:
 
-- Provision and manage **Active Directory user accounts**
-- Configure **Microsoft 365 permissions**
-- Simulate ticket intake and triage using a basic ticketing workflow
-- Perform **remote troubleshooting and desktop support**
-- Create **technical documentation** for repetitive support tasks
-- Practice **endpoint configuration and imaging tasks**
-- Maintain screenshots and code/scripts for all steps
+- Active Directory tasks (user creation, group management)
+- Office 365 troubleshooting and support
+- Ticketing system workflow documentation
+- Hardware/software deployments
+- Remote support walkthroughs
+- Documentation and communication practices
 
----
-
-## 📁 Folder Structure
-
-- `Documentation/` – SOPs, config guides, ticket write-ups  
-- `Scripts/` – CMD, PowerShell, or Python scripts used during simulation  
-- `Screenshots/` – Evidence of tasks completed (setup, AD, 365, tickets, etc.)
+The goal is to demonstrate entry-level IT support expertise in a structured and recruiter-friendly format.
 
 ---
 
-## 🛠️ Tools Used
-
-- Windows 11 (VM)
-- Windows Server (for AD simulation)
-- Microsoft 365
-- GitHub Desktop + CMD + Notepad
-- PowerShell / CMD
-- [Optional] Spiceworks/Ticket Tool for simulated workflows
-
----
-
-## 📸 Initial Setup
-
-![Folder Structure](./Screenshots/01_ProjectFolder_Structure_Setup.png)
-
----
-## 🧑‍💻 Virtual Lab Environment
-
-This project is fully simulated in a home-based virtual lab using VMware Workstation. It includes:
-
-- Windows 11 VM – simulating end-user workstation
-- Windows Server 2022 VM – configured with Active Directory
-- pfSense – for basic network segmentation
-- Microsoft 365 Developer Tenant – to simulate real-world cloud-based user access
-
-This setup allows me to simulate realistic helpdesk scenarios such as account provisioning, remote support, and endpoint troubleshooting — just as I would in a live IT environment.
+## 🧠 Tools & Technologies
+- Windows 10 (User VM) and Windows Server 2022 (Domain Controller)
+- Active Directory Users & Computers (ADUC)
+- Microsoft 365 Admin Center (simulated environment)
+- PowerShell and Command Prompt
+- GitHub Desktop for version control
+- Screenshots and logs for documentation
 
 ---
 
-## 🚀 Status
-
-🔧 Folder and documentation setup complete  
-🧪 Virtual environment active and ready  
-✅ Next: Begin user provisioning and ticket simulation
-
+## 🗂 Folder Structure
+```bash
+Helpdesk_Analyst_Simulation_Lab/
+│
+├── Documentation/           # Markdown logs, tickets, summaries
+├── Scripts/                 # PowerShell commands and batch files
+├── Screenshots/             # Visual documentation from lab walkthroughs
+└── README.md                # Project overview and instructions
+```
 
 ---
 
-## 🔗 GitHub Repository
+## 📸 Screenshots
+| #  | Description                         |
+|----|-------------------------------------|
+| 01 | Initial folder structure setup      |
+| 02 | ADUC - Create new user simulation   |
+| 03 | Microsoft 365 login issue simulation|
+| 04 | GitHub README preview (this file)   |
+| 05 | WiFi Troubleshooting Ticket         |
+| 06 | Office 365 MFA Lockout Ticket       |
 
-[Click here to explore full project folder](https://github.com/Margaret-Johnson-ai/IT-Cybersecurity-Labs/tree/main/IT-Support-Labs/Helpdesk_Analyst_Simulation_Lab)
+---
+
+## 🛠 Simulation Tasks
+
+### ✅ Active Directory Tasks
+- Create 3 new users with varying roles
+- Add them to appropriate security/distribution groups
+- Reset passwords and document logs
+
+### ✅ Office 365 Simulation
+- Simulate login failure scenario
+- Create and document resolution steps (e.g., MFA lockout, license misassignment)
+
+### ✅ Ticket Documentation
+- Simulate 2 realistic support tickets:
+  - **HD-001**: Office 365 MFA Lockout
+  - **HD-002**: WiFi Network Connectivity Issue
+
+Each includes:
+- Ticket summary, steps taken, resolution, and follow-up
+- Linked screenshot reference in `/Screenshots/`
+
+### ✅ Device Troubleshooting
+- Simulate a printer and Wi-Fi connection issue
+- Provide command-line diagnostics and user guidance
+
+### ✅ Communication Practice
+- Draft a sample support summary email to a user
+- Include clear, concise steps with respectful tone
+
+---
+
+## 📌 Why This Project Stands Out
+Unlike generic IT lab setups, this simulation replicates real Helpdesk operations including:
+
+- Clear documentation practices
+- Real-world user scenarios
+- A recruiter-facing presentation layout
+- PowerShell and GUI-based demonstrations
+
+It is ideal for:
+- Entry-level job applications
+- Showcasing transferable skills
+- Proving hands-on capability without a formal job background
+
+---
+
+## 🔄 Next Steps
+- [ ] Complete final PowerShell commands and logs
+- [ ] Draft summary user email (communication practice)
+- [ ] Begin drafting LinkedIn post to showcase this project
+
+---
+
+## 🧠 About Me
+I'm Margaret Johnson, a tech learner building real-world labs to showcase my growth into IT support and cybersecurity. This project reflects my journey from beginner to skilled problem-solver, committed to continuous improvement and professional readiness.
+
+📁 [Back to Portfolio Home](https://github.com/Margaret-Johnson-ai/IT-Cybersecurity-Labs)
