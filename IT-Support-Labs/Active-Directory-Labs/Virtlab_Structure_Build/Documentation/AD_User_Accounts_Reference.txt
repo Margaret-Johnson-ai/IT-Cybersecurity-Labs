@@ -1,0 +1,50 @@
+
+====================================================
+Name: Alex HR
+Username: alex.hr
+Password: P@ssw0rd123
+OU: HR > Users
+Groups: HR_Group
+Email: alex.hr@mjvirtlab.home
+Notes: Created via GUI
+====================================================
+Name: svcBackup
+Username: svc_backup
+Password: P@ssBackup2025
+OU: Service_Accounts
+Groups: None
+Email: svc_backup@mjvirtlab.home
+Notes: Service account
+====================================================
+Name: Sandra Wallace
+Username: swallace
+Password: Winter2025!
+OU: HR > Users
+Groups: HR_Group
+Email: swallace@mjvirtlab.home
+Notes: Created via GUI
+====================================================
+Name: Tom Green
+Username: tgreen
+Password: Winter2025!
+OU: IT > Users
+Groups: IT_Support
+Email: tgreen@mjvirtlab.home
+Notes: Created via GUI
+====================================================
+Name: Amanda Sales
+Username: asales
+Password: Winter2025!
+OU: Sales > Users
+Groups: Sales_Team
+Email: asales@mjvirtlab.home
+Notes: Created via GUI
+====================================================
+Name: svcBackup
+Username: svcBackup
+Password: BackupTask2025!
+OU: Service_Accounts
+Groups: None
+Email: svcBackup@mjvirtlab.home
+Notes: Created via GUI
+====================================================
