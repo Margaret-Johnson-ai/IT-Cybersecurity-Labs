@@ -1,0 +1,30 @@
+GPO Backup & Restore Procedure
+====================================
+
+This procedure outlines how I performed a backup and potential restoration of all Group Policy Objects (GPOs) in my lab domain (MJVIRTLAB). I created this as part of my real-world Active Directory lab to simulate IT administrator best practices.
+
+🗂️ Backup GPOs to a designated folder:
+
+Step 1: Open PowerShell as Administrator  
+Step 2: Create a backup directory:
+    mkdir C:\GPO_Backups
+
+Step 3: Run the following command to back up all GPOs:
+    Backup-GPO -All -Path "C:\GPO_Backups"
+
+Step 4: Confirm backups were created:
+    Get-ChildItem "C:\GPO_Backups"
+
+🔁 Restore GPO from backup (when needed):
+
+Step 1: Identify the GPO backup you want to restore  
+Step 2: Use the following command:
+    Restore-GPO -Name "Your-GPO-Name" -Path "C:\GPO_Backups"
+
+📝 Notes:
+- Always run these commands from a domain controller or PowerShell session with GPMC module installed.
+- This backup method preserves all settings including folder redirection, software policies, and login banners.
+- Folder `C:\GPO_Backups` can be copied externally for offsite or disaster recovery simulation.
+
+Created as part of:
+Virtlab_Structure_Build → Active Directory OU and GPO Simulation

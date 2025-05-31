@@ -1,0 +1,5 @@
+﻿FirstName,LastName,Username,OU,Password
+Sandra,Wallace,swallace,"OU=HR,OU=Users,DC=mjvirtlab,DC=home",Welcome@123
+Tom,Green,tgreen,"OU=IT,OU=Users,DC=mjvirtlab,DC=home",Winter2025!
+Amanda,Sales,asales,"OU=Sales,OU=Users,DC=mjvirtlab,DC=home",Winter2025!
+Backup,Service,svcBackup,"OU=Service_Accounts,DC=mjvirtlab,DC=home",Backup@123

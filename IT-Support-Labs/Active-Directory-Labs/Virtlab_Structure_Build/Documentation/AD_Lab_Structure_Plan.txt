@@ -1,0 +1,50 @@
+============================================================
+Active Directory Lab - OU & Group Design Structure Overview
+============================================================
+
+📌 Purpose:
+The goal of this AD structure is to simulate a real-world small to mid-sized company that separates users and policies based on department, role, and IT support needs.
+
+🧩 OU Structure:
+- OU: HR
+  - Sub-OU: Users
+  - Sub-OU: Computers
+  - GPO: Folder Redirection (HRDocs)
+  
+- OU: Sales
+  - Sub-OU: Users
+  - Sub-OU: Computers
+  - GPO: Limit Control Panel, Restrict Tools (SalesDocs)
+
+- OU: IT
+  - Sub-OU: Users
+  - Sub-OU: Computers
+  - GPO: Access to Admin Tools, PS scripts, Redirection to ITDocs
+
+- OU: Service_Accounts
+  - Used for non-interactive or scheduled backup accounts (e.g., svcBackup)
+
+🔐 Security Groups Created:
+- HR_Group
+- Sales_Team
+- IT_Support
+
+👩🏽‍💼 User Placement:
+- Sandra Wallace → HR > Users
+- Amanda Sales → Sales > Users
+- Tom Green → IT > Users
+- svcBackup → Service_Accounts
+
+🧠 Reasoning Behind the Structure:
+- Keeping users and computers separated makes it easier to link GPOs and avoid accidental inheritance.
+- Creating GPOs per department reflects how many orgs apply role-based access and control.
+- OU-based redirection ensures data can be backed up or audited per department (HRDocs, SalesDocs, ITDocs).
+- Service accounts are isolated for auditing and security purposes.
+
+🛠️ Tools Used:
+- Active Directory Users & Computers (ADUC)
+- Group Policy Management Console (GPMC)
+- PowerShell (for backup and scripted deployments)
+- VMware Workstation for the virtual environment
+
+✅ Status: Fully implemented and tested with login confirmation and policy application.

@@ -1,21 +1,35 @@
-# MapDrives.ps1 - Group-Based Drive Mapping Script
+# MapDrives.ps1 – AD Group-Based Drive Mapping Script
+# Author: Margaret Johnson
+# Purpose: Automatically map network drives based on group membership in a Windows domain environment
 
-$groups = @{
-    "HR_Group"      = "\\WIN22-DC1\HRShare"
-    "IT_Support"    = "\\WIN22-DC1\ITShare"
-    "Sales_Team"    = "\\WIN22-DC1\SalesShare"
+# Define group-to-share mappings
+$driveMap = @{
+    "HR_Group"      = "\\WIN22-DC1\HRDocs"
+    "IT_Support"    = "\\WIN22-DC1\ITDocs"
+    "Sales_Team"    = "\\WIN22-DC1\SalesDocs"
 }
 
-# Get current user groups
-$userGroups = (New-Object System.Security.Principal.WindowsPrincipal([System.Security.Principal.WindowsIdentity]::GetCurrent())).Groups | 
-              ForEach-Object { $_.Translate([System.Security.Principal.NTAccount]) } | 
-              ForEach-Object { $_.Value.Split('\')[-1] }
+# Get current user group memberships
+$user = [System.Security.Principal.WindowsIdentity]::GetCurrent()
+$principal = New-Object System.Security.Principal.WindowsPrincipal($user)
+$userGroups = $principal.Groups | ForEach-Object {
+    $_.Translate([System.Security.Principal.NTAccount]).Value.Split('\')[-1]
+}
 
-# Loop through group mappings
-foreach ($group in $groups.Keys) {
+# Map drive based on group
+foreach ($group in $driveMap.Keys) {
     if ($userGroups -contains $group) {
-        # Map H: drive
-        New-PSDrive -Name "H" -PSProvider FileSystem -Root $groups[$group] -Persist
+        $path = $driveMap[$group]
+
+        # Only map if the share is accessible
+        if (Test-Path $path) {
+            Write-Host "Mapping drive H: to $path for group $group"
+            New-PSDrive -Name "H" -PSProvider FileSystem -Root $path -Persist
+        } else {
+            Write-Host "Share path $path not accessible. Check network or permissions."
+        }
+
         break
     }
 }
+
