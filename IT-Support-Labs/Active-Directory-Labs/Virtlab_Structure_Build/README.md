@@ -1,100 +1,70 @@
-=============================================================
-Active Directory Lab Project – Phase 1 Documentation
-By Margaret Johnson | Date: May 31, 2025
-=============================================================
+# 🏗️ Active Directory Lab: Virtlab Structure Build
 
-🧩 Project Overview:
----------------------
-This hands-on lab simulates a realistic business environment where I built and configured an Active Directory (AD) domain from scratch using Windows Server 2022 and a Windows 11 client. The goal was to reinforce my understanding of user management, organizational units (OUs), group policy management (GPO), folder redirection, and troubleshooting domain connectivity issues—all from an IT Support and Systems Administrator perspective.
+This project is part of my hands-on journey into IT support and Active Directory management. I built this lab from scratch using Windows Server 2022 and Windows 11 to simulate how real IT teams manage users, OUs, GPOs, file shares, and administrative tasks in a business environment.
 
-This project is part of my larger GitHub portfolio to showcase job-ready skills to recruiters and hiring managers as I transition into IT Support and Cybersecurity.
+---
 
-🖥️ Lab Environment Setup:
---------------------------
-• Windows Server 2022 (WIN22-DC1) – Domain Controller
-• Windows 11 Client (WIN11-ADMIN01)
-• Virtual Network configured via VMware Workstation
-• Static IP Configuration + DNS Setup
-• Domain: MJVirtLab.home
+## 🎯 Objective
 
-⚙️ Domain Configuration:
---------------------------
-• Installed Active Directory Domain Services (AD DS) on WIN22-DC1
-• Promoted server to Domain Controller
-• Verified DNS settings and domain functionality
-• Joined WIN11-ADMIN01 to the MJVirtLab.home domain
-• Troubleshot domain join issues using:
-  - `ipconfig /flushdns`, `ipconfig /registerdns`
-  - `nltest`, `nslookup`, hosts file edits
+The goal of this project was to learn and demonstrate how to:
 
-👤 User & OU Setup:
----------------------
-Created users and placed them in custom Organizational Units:
+- Build a domain environment with structured Organizational Units (OUs)
+- Add and manage users and service accounts
+- Apply group policies for security and productivity
+- Automate drive mapping based on user group
+- Simulate recovery steps and admin troubleshooting
 
------------------------------------------------------
-Name: Sandra Wallace
-Username: swallace
-Password: Set per policy (complex, 8+ characters with uppercase, lowercase, numbers, and symbols)
-OU: HR > Users
-Groups: HR_Group
-Email: swallace@mjvirtlab.home
------------------------------------------------------
-Name: Tom Green
-Username: tgreen
-Password: Set per policy (complex, 8+ characters with uppercase, lowercase, numbers, and symbols)
-OU: IT > Users
-Groups: IT_Support
-Email: tgreen@mjvirtlab.home
------------------------------------------------------
-Name: Amanda Sales
-Username: asales
-Password: Set per policy (complex, 8+ characters with uppercase, lowercase, numbers, and symbols)
-OU: Sales > Users
-Groups: Sales_Team
-Email: asales@mjvirtlab.home
------------------------------------------------------
-Name: svcBackup
-Username: svcBackup
-Password: Set per policy (complex, 8+ characters with uppercase, lowercase, numbers, and symbols)
-OU: Service_Accounts
-Groups: None
-Email: svcBackup@mjvirtlab.home
------------------------------------------------------
+I treated this like a real internal IT setup—documenting everything as I went.
 
-🛡️ Group Policy Management:
------------------------------
-• Created and linked the following GPOs:
-  - HR_Redirect_Docs
-  - IT_Admin_Tools
-  - Sales_Limit_Settings
+---
 
-• Configured Folder Redirection via GPO:
-  - Mapped shared folders: HRDocs, ITDocs, SalesDocs
-  - Verified creation and access permissions
-  - Linked GPOs to the appropriate OUs
+## 🛠️ Technologies Used
 
-📂 Shared Folder Paths:
--------------------------
-• \WIN22-DC1\HRDocs
-• \WIN22-DC1\ITDocs
-• \WIN22-DC1\SalesDocs
+- Windows Server 2022 (Domain Controller)
+- Windows 11 Client Machine
+- Active Directory Users & Computers (ADUC)
+- Group Policy Management Console (GPMC)
+- PowerShell
+- CMD & BAT scripting
+- GitHub Desktop (for documentation and version control)
 
-🧠 Lessons Learned:
----------------------
-• Real-world skills go beyond textbook setups — I ran into several domain join issues and turned that into a separate project: [Domain Join Debugging Lab].
-• GPOs must be tested thoroughly — I learned how to verify settings from both the server and client sides.
-• Every action taken was logged with screenshots and documented to reinforce best practices in IT operations.
+---
 
-✅ Next Steps:
-----------------
-• Verify folder redirection for IT and Sales OUs
-• Set up logon scripts for automation
-• Begin backup and restore simulation using Veeam
-• Finalize and publish the AD project README with visuals
+## 📁 Folder Structure Overview
 
-📁 Project Path:
------------------
-GitHub Repository: [IT-Support-Labs > AD_Configuration_Lab]
-Screenshots: ./Screenshots/
-Documentation: ./AD_Project_Documentation/
+Virtlab_Structure_Build/
+│
+├── Documentation/          # User info, GPO docs, recovery procedures
+├── Scripts/                # PowerShell & CMD scripts for automation
+├── GPO_Configs/            # Markdown notes for each custom GPO setup
+├── Screenshots/            # Visual proof of completed tasks (41+ images)
+└── README.md               # Overview of the entire project
+
+---
+
+## 🔄 How I Set It Up
+
+If you're learning like I am and want to try this yourself, here’s the basic flow I followed:
+
+1. Installed and promoted a Windows Server 2022 VM to Domain Controller.
+2. Created OUs for HR, IT, Sales, and Service Accounts.
+3. Added users manually and documented password policies.
+4. Wrote PowerShell scripts for drive mapping and user creation.
+5. Set up and tested GPOs for folder redirection and login permissions.
+6. Captured screenshots and backed up my setup using GitHub.
+
+---
+
+## ✅ What This Project Shows
+
+This lab shows that I’m not just learning theory—I’m taking initiative to set up environments, troubleshoot issues, and simulate real admin work. I’ve included visual documentation and scripts to reflect what I’d do in a real help desk or sysadmin role.
+
+I’m excited to keep building on this foundation.
+
+---
+
+## 👀 More Labs Coming Soon
+
+This is one of several projects in my IT + Cybersecurity learning path. Feel free to explore more on my GitHub to see how I’m growing!
+
 
