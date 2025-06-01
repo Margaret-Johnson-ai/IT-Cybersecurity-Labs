@@ -1,5 +1,5 @@
 ﻿FirstName,LastName,Username,OU,Password
-Sandra,Wallace,swallace,"OU=HR,OU=Users,DC=mjvirtlab,DC=home",Welcome@123
-Tom,Green,tgreen,"OU=IT,OU=Users,DC=mjvirtlab,DC=home",Winter2025!
-Amanda,Sales,asales,"OU=Sales,OU=Users,DC=mjvirtlab,DC=home",Winter2025!
-Backup,Service,svcBackup,"OU=Service_Accounts,DC=mjvirtlab,DC=home",Backup@123
+Sandra,Wallace,swallace,"OU=HR,OU=Users,DC=mjvirtlab,DC=home","Password: Set via complexity policy (8+ characters, mixed case, symbol, numeric)"
+Tom,Green,tgreen,"OU=IT,OU=Users,DC=mjvirtlab,DC=home","Password: Set via complexity policy (8+ characters, mixed case, symbol, numeric)"
+Amanda,Sales,asales,"OU=Sales,OU=Users,DC=mjvirtlab,DC=home","Password: Set via complexity policy (8+ characters, mixed case, symbol, numeric)"
+Backup,Service,svcBackup,"OU=Service_Accounts,DC=mjvirtlab,DC=home","Password: Set via complexity policy (8+ characters, mixed case, symbol, numeric)"

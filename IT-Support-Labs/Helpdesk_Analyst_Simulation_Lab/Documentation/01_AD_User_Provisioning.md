@@ -13,7 +13,7 @@ The onboarding team submitted a ticket requesting the creation of a new user for
 4. Created new user: `jdoe`
    - Full name: John Doe
    - Username: jdoe
-   - Password: Temp@1234
+   - Password: (ConvertTo-SecureString "<REDACTED>" -AsPlainText -Force)
 5. Added `jdoe` to the following groups:
    - `SalesGroup`
    - `Domain Users`

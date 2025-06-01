@@ -5,7 +5,7 @@ New-ADUser -Name "John Doe" -GivenName "John" -Surname "Doe" -SamAccountName "jd
 Add-ADGroupMember -Identity "IT Support" -Members "jdoe"
 
 # Reset user password
-Set-ADAccountPassword -Identity "jdoe" -NewPassword (ConvertTo-SecureString "NewPassword456!" -AsPlainText -Force) -Reset
+Set-ADAccountPassword -Identity "jdoe" -NewPassword (ConvertTo-SecureString "<REDACTED>" -AsPlainText -Force) -Reset
 
 # Disable a user account
 Disable-ADAccount -Identity "jdoe"

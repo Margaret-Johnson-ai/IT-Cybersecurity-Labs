@@ -3,7 +3,7 @@
 ====================================================
 Name: Sandra Wallace
 Username: swallace
-Password: Winter2025!
+Password: Password: Set via complexity policy (8+ characters, mixed case, symbol, numeric)
 OU: HR > Users
 Groups: HR_Group
 Email: swallace@mjvirtlab.home
@@ -11,7 +11,7 @@ Notes: Created via GUI
 ====================================================
 Name: Tom Green
 Username: tgreen
-Password: Winter2025!
+Password: Password: Set via complexity policy (8+ characters, mixed case, symbol, numeric)
 OU: IT > Users
 Groups: IT_Support
 Email: tgreen@mjvirtlab.home
@@ -19,7 +19,7 @@ Notes: Created via GUI
 ====================================================
 Name: Amanda Sales
 Username: asales
-Password: Winter2025!
+Password: Password: Set via complexity policy (8+ characters, mixed case, symbol, numeric)
 OU: Sales > Users
 Groups: Sales_Team
 Email: asales@mjvirtlab.home
@@ -27,7 +27,7 @@ Notes: Created via GUI
 ====================================================
 Name: svcBackup
 Username: svcBackup
-Password: Backup@123
+Password: Password: Set via complexity policy (8+ characters, mixed case, symbol, numeric)
 OU: Service_Accounts
 Groups: None
 Email: svcBackup@mjvirtlab.home
